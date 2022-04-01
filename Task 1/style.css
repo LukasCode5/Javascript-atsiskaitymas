@@ -52,6 +52,25 @@ form {
   color: #fff;
 }
 
+#output{
+  max-width:80% ;
+  margin: 0 auto;
+  font-size: 30px;
+}
+
+.ul-weight li{
+list-style: none;
+}
+
+.ul-weight{
+max-width: 25%;
+ border: 2px solid #ababab;
+ background-color: rgb(233, 233, 233);
+ padding: 10px;
+ border-radius: 10px;
+}
+
+
 /* Tablet */
 @media screen and (min-width: 768px) {
   .headline {
