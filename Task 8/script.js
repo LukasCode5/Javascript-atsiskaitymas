@@ -8,16 +8,24 @@ division() - priima du skaičius ir grąžina jų dalybos rezultatą;
 
 function Calculator() {
   this.sum = function (number1, number2) {
-    return number1 + number2;
+    this.number1 = number1;
+    this.number2 = number2;
+    return this.number1 + this.number2;
   };
   this.subtraction = function (number1, number2) {
-    return number1 - number2;
+    this.number1 = number1;
+    this.number2 = number2;
+    return this.number1 - this.number2;
   };
   this.multiplication = function (number1, number2) {
-    return number1 * number2;
+    this.number1 = number1;
+    this.number2 = number2;
+    return this.number1 * this.number2;
   };
   this.division = function (number1, number2) {
-    return number1 / number2;
+    this.number1 = number1;
+    this.number2 = number2;
+    return this.number1 / this.number2;
   };
 }
 
