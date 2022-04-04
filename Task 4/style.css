@@ -45,4 +45,6 @@ font-size: 25px;
 .card-ul{
   margin-left: 30px;
   font-size: 17px;
+  list-style: none;
+  margin-left: 10px;
 }

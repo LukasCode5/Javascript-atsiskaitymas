@@ -13,11 +13,16 @@ const ENDPOINT = "cars.json";
 const outputEl = document.getElementById("output");
 
 async function getCars() {
-  const response = await fetch("cars.json");
-  const atsInJs = await response.json();
-  atsInJs.forEach((carObj) => {
-    createCarCards(carObj);
-  });
+  try {
+    const response = await fetch("cars.json");
+    const atsInJs = await response.json();
+    atsInJs.forEach((carObj) => {
+      createCarCards(carObj);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+
   //   console.log(atsInJs);
 }
 

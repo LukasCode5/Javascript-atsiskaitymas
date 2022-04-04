@@ -20,12 +20,16 @@ btnEl.addEventListener("click", () => {
 });
 
 async function showUsers() {
-  const response = await fetch(ENDPOINT);
-  const atsInJs = await response.json();
-  //   console.log(atsInJs);
-  atsInJs.forEach((userObj) => {
-    makeCard(userObj);
-  });
+  try {
+    const response = await fetch(ENDPOINT);
+    const atsInJs = await response.json();
+    //   console.log(atsInJs);
+    atsInJs.forEach((userObj) => {
+      makeCard(userObj);
+    });
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 function makeCard(userObj) {
